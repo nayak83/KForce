@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "df179219-b894-4727-b75f-042fa7e9a2ce",
+		"name": "OrderAPICollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "postOrders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Authorization",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"tortilla\": \"corn\",\r\n        \"protein\": \"beans\",\r\n        \"vegetables\": [\r\n            \"cabbage\",\r\n            \"jalapenos\"\r\n        ],\r\n        \"salsa\": \"hot\",\r\n        \"extras\": \"avocado\"\r\n    },\r\n    {\r\n        \"tortilla\": \"flour\",\r\n        \"protein\": \"beans\",\r\n        \"vegetables\": [\r\n            \"jalapenos\"\r\n        ],\r\n        \"salsa\": \"mild\",\r\n        \"extras\": \"\"\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
